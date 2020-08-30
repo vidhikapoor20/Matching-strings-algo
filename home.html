@@ -1,0 +1,16 @@
+<html>
+  <body>
+   <div>
+        <form action = "http://localhost:5000/result" method = "POST" id = form1>
+          name:  <input type = 'text' name = 'value'></input><br/>
+
+            filename:<input type = 'text' name = 'filename'></input><br/>
+           <button type="submit" form="form1" value="Submit" >  Enter  </button>
+       </form>
+   </div>
+    {% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+    {% endfor %}
+  </body>
+</html>
